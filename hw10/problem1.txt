@@ -1,0 +1,14 @@
+What if your script had to accept numbers in the trillions?  Describe, but don’t 
+implement, how you would attempt to generalize your code so that you didn’t have 
+to have 50 if statements.
+
+
+Well first thing i would do is search cpan and use a module i found called Lingua::EN::Numbers.
+It converts numbers to words no matter how large the number is.  Since im sure we were not allowed
+to use this i had some ideas on how to get my code to do it but it was just more if statements.
+I made a hash of postfixs that went up to hundred million, but the issue was the single or plural saying
+of the first number.  After the 2nd digit every 3 is a plural form like twenty thirty and so on.  I was
+attempting to make a big if statement that looked like if($digit == 5 | $digit == 8 | $digit == 11) and so on
+but it did not even up working the way i wanted it to so i removed it.  The only way i can think this would work is
+a more cleaver hash table and some kind of statement that every third digit after 2 was plural form of the number
+otherwise single.
